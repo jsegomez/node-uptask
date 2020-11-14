@@ -1,0 +1,21 @@
+extends ../layout/index
+block contenido
+    h3 #{titulo}
+
+    .row
+        if proyectos
+            each proyecto in proyectos
+                .col-12.col-md-6.col-lg-5.col-xl-4
+                    .card.card-stats
+                        .card-header.card-header-warning.card-header-icon
+                            .card-icon
+                                i.material-icons content_copy
+                            p.card-category Proyecto:
+                            p.card-title
+                                | #{proyecto.nombre}                             
+                        .card-footer
+                            .stats                        
+                                a.btn.btn-primary.pull-right(href=`/proyectos/${proyecto.url}`)
+                                    | Detalles
+                                    .ripple-container
+

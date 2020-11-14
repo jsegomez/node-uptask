@@ -1,0 +1,91 @@
+extends ../layout/index
+block contenido
+    h4 Detalles proyecto: <b> #{titulo} </b>
+    hr
+
+    .row.justify-content-center
+        .col-12.col-md-8
+            .card
+                .card-header.card-header-tabs.card-header-primary
+                    .nav-tabs-navigation
+                        .nav-tabs-wrapper                    
+                            ul.nav.nav-tabs(data-tabs='tabs')
+                                li.nav-item
+                                    a.nav-link.active.show(href='#profile' data-toggle='tab')
+                                        i.material-icons assignment
+                                        |  Tareas
+                                        .ripple-container
+                                        .ripple-container
+                                li.nav-item
+                                    a.nav-link(href='#messages' data-toggle='tab')
+                                        i.material-icons add_box
+                                        |  Agregar tarea
+                                        .ripple-container
+                                        .ripple-container
+
+                .card-body
+                    .tab-content
+                        #profile.tab-pane.active.show
+                            table.table
+                                tbody
+                                    tr
+                                        td
+                                            .form-check
+                                                label.form-check-label
+                                                    input.form-check-input(type='checkbox' value='' checked='')
+                                                    span.form-check-sign
+                                                        span.check
+                                        td Sign contract for "What are conference organizers afraid of?"
+                                        td.td-actions.text-right
+                                            button.btn.btn-primary.btn-link.btn-sm(type='button' rel='tooltip' title='' data-original-title='Edit Task')
+                                                i.material-icons edit
+                                            button.btn.btn-danger.btn-link.btn-sm(type='button' rel='tooltip' title='' data-original-title='Remove')
+                                                i.material-icons close
+                                    tr
+                                        td
+                                            .form-check
+                                                label.form-check-label
+                                                    input.form-check-input(type='checkbox' value='')
+                                                    span.form-check-sign
+                                                        span.check
+                                        td Lines From Great Russian Literature? Or E-mails From My Boss?
+                                        td.td-actions.text-right
+                                            button.btn.btn-primary.btn-link.btn-sm(type='button' rel='tooltip' title='' data-original-title='Edit Task')
+                                                i.material-icons edit
+                                            button.btn.btn-danger.btn-link.btn-sm(type='button' rel='tooltip' title='' data-original-title='Remove')
+                                                i.material-icons close
+                                    tr
+                                        td
+                                            .form-check
+                                                label.form-check-label
+                                                    input.form-check-input(type='checkbox' value='')
+                                                    span.form-check-sign
+                                                        span.check
+                                        td
+                                            | Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                                        td.td-actions.text-right
+                                            button.btn.btn-primary.btn-link.btn-sm(type='button' rel='tooltip' title='' data-original-title='Edit Task')
+                                                i.material-icons edit
+                                            button.btn.btn-danger.btn-link.btn-sm(type='button' rel='tooltip' title='' data-original-title='Remove')
+                                                i.material-icons close
+                                    tr
+                                        td
+                                            .form-check
+                                                label.form-check-label
+                                                    input.form-check-input(type='checkbox' value='' checked='')
+                                                    span.form-check-sign
+                                                        span.check
+                                        td Create 4 Invisible User Experiences you Never Knew About
+                                        td.td-actions.text-right
+                                            button.btn.btn-primary.btn-link.btn-sm(type='button' rel='tooltip' title='' data-original-title='Edit Task')
+                                                i.material-icons edit
+                                            button.btn.btn-danger.btn-link.btn-sm(type='button' rel='tooltip' title='' data-original-title='Remove' aria-describedby='tooltip603952')
+                                                i.material-icons close
+                        #messages.tab-pane
+                            h3 Hola mundo
+
+
+    .row.justify-content-center
+        .col-12.col-md-6.botones-acciones
+            a.btn.btn-primary(href=`/proyectos/editar/${proyecto.id}`) Editar proyecto
+            a.btn.btn-danger(href='') Eliminar proyecto

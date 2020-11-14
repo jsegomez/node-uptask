@@ -1,0 +1,26 @@
+extends ../layout/index
+include ../mixins/crear-editar
+
+block contenido
+    h3 #{titulo}
+
+    +crear-editar(proyecto)
+
+    if errores
+        .row.justify-content-center.animate__animated.animate__shakeX
+            .col-12.col-md-8.col-xl-6                
+                each error in errores
+                    .alert.errores
+                        button.close(
+                            type='button'
+                            data-dismiss='alert'
+                            aria-label='Close'
+                        )
+                            i.material-icons close
+                        span Favor indicar el nombre del proyecto
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+mixin crear-editar(proyecto = {})
+    .row.justify-content-center
+        .col-12.col-md-8.col-xl-6
+            .card
+                .card-header.card-header-primary
+                    h4.card-title #{tituloCard}
+
+                .card-body
+                    form(
+                        action=`/guardar-proyecto/${proyecto.id || ''}`
+                        method="POST"
+                        autocomplete="off"
+                    )
+                        .row
+                            .col-md-12.mt-3
+                                .form-group
+                                    label.bmd-label-floating Nombre del proyecto
+                                    input.form-control(
+                                        type="text"
+                                        id="nombre"
+                                        name="nombre"
+                                        value=`${proyecto.nombre ? proyecto.nombre : ''}`
+                                    )
+
+                        button.btn.btn-primary.pull-right(type='submit') #{tituloBtn}
+                        .clearfix
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
