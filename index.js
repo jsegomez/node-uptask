@@ -11,7 +11,7 @@ require('./models/Proyectos');
 
 // Validamos la conexion a la base de datos
 db.sync()
-    .then(()=> console.log('Conectado a la base de datos'))
+    .then(()=> console.log('Conectado a la base de datos..'))
     .catch((error)=> console.log(error))
 
 // Importación de express
